@@ -1,0 +1,118 @@
+.betting-section{
+    width: 100%;
+    //background: purple;
+    //padding: 50px;
+    //height: 100px;
+    display: flex;
+    justify-content: space-between;
+
+    .betting-content{
+        width: 31.5%;
+
+        .betting-header{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(18, 24, 29, 1);
+            border-radius: 30px;
+           
+            padding: 12.5px 15px;
+            font-size: 14px;
+            border: 1.5px solid rgba(24, 38, 47, 1);
+            margin: 0px 0px 10px 0px;
+
+
+            .header{
+                display: flex;
+                align-items: center;
+                color: rgba(211, 224, 233, 1);
+
+                img{
+                    margin: 0px 10px 0px 0px;
+                }
+
+            }
+
+            span{
+                color: rgba(91, 108, 121, 1);
+            }
+
+        }
+
+        .betting-container{
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            border: 1px solid  rgba(91, 108, 121, 1);
+            color: rgba(91, 108, 121, 1);
+            //display: flex;
+            //flex-direction: column;
+            padding: 20px 15px;
+            transition: ease-in-out .3s;
+            background: rgba(28, 41, 50, 1);
+
+            .betting-container-header{
+                padding: 0px 0px 10px 0px;
+                margin: 0px 0px 15px 0px;
+                border-bottom: 1px solid  rgba(91, 108, 121, 1);
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                header{
+                  
+                }
+
+                .winnings{
+                    display: flex;
+                    align-items: center;
+
+                    img{
+                        margin: 0px 10px 0px 0px;
+                    }
+                }
+            }
+
+            ul{
+
+                li{
+                    list-style: none;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin: 0px 0px 5px 0px;
+
+                    div{
+                        display: flex;
+                        align-items: center;
+
+                        .user-image{
+                            margin: 0px 5px 0px 0px;
+                        }
+                    }
+
+                    .figure{
+                        animation: blink 2s infinite;
+                    }
+                }
+            }
+        }
+    }
+
+  
+}
+
+@keyframes blink {
+    0% {
+        color: rgba(1, 254, 134, 1); /* Start color */
+    }
+    50% {
+      color: rgba(91, 108, 121, 1);; /* Blinking interval - color becomes transparent */
+    }
+    100% {
+        color: rgba(1, 254, 134, 1);
+    }
+  }
+  
+  
