@@ -25,7 +25,15 @@
         font-size: 14px;
       }
 
+      tr:nth-child(even):hover{
+        background-color:  rgba(22, 34, 43, 0.8);
+      }
+
       tr:nth-child(even) {
         background-color: rgba(22, 34, 43, 1);
+      }
+
+      .pay{
+        color: rgba(1, 254, 134, 1);
       }
   }

@@ -1,3 +1,20 @@
+@media screen and (min-width:1000px) {
+    .betting-content{
+        width: 31.5%;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 999px){
+    .betting-section{
+        flex-direction: column;
+    }
+
+    .betting-content{
+        width: 100%;
+        margin: 0px 0px 20px 0px;
+    }
+}
+
 .betting-section{
     width: 100%;
     //background: purple;
@@ -7,7 +24,7 @@
     justify-content: space-between;
 
     .betting-content{
-        width: 31.5%;
+        //width: 31.5%;
 
         .betting-header{
             width: 100%;

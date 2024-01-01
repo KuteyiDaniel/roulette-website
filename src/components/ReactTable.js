@@ -55,7 +55,7 @@ const ReactTable = () => {
                         <td>00:{data.time}</td>
                         <td>{data.amount}</td>
                         <td>{data.multiplier}</td>
-                        <td>{(data.amount * data.multiplier).toFixed(1)}</td>
+                        <td className='pay'>{(data.amount * data.multiplier).toFixed(1)}</td>
                     </tr>
                 })
             }

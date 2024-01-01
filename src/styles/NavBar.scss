@@ -1,12 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500&family=Raleway:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
 
+@media screen and (min-width:1200px) {
+  
+    .navigation-figures{
+        display: flex;
+    }
+
+    .navigation-page-width{
+        padding: 12.5px 35px;
+    }
+
+    .navigation-user-container{
+        display: flex;
+    }
+  
+}
+
+@media screen and (min-width: 0px) and (max-width: 1199px){
+    .navigation-figures.fade{
+        display: none;
+    }
+
+ 
+
+    .navigation-page-width{
+        padding: 12.5px 15px;
+    }
+
+    .navigation-user-container{
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .navigation-user-container{
+        display: none;
+    }
+}   
+
+
+
 
 .navigation-bar{
    
 
     .navigation-page-width{
-        padding: 12.5px 35px;
+        //padding: 12.5px 35px;
         margin: 0 auto;
         //width: calc(100% - 2.5rem);
         width: 100%;
@@ -28,7 +68,7 @@
                 border: 1.5px solid rgba(24, 38, 47, 1);
                 border-radius: 10px;
                 align-items: center;
-                display: flex;
+                //display: flex;
                 background: rgb(14,19,27);
                
                 font-family: 'Quicksand', sans-serif;
@@ -62,7 +102,7 @@
             }
 
             .navigation-user-container{
-                display: flex;
+                //display: flex;
                 align-items: center;
 
                 .navigation-icons{
