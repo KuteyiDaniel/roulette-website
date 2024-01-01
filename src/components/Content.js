@@ -1,9 +1,12 @@
-import React from 'react'
-import { useState } from 'react'
+import React, { useEffect } from 'react'
+import { useState, /* useEffect */ } from 'react'
 import '../styles/Content.scss'
 import { FaVolumeXmark } from "react-icons/fa6";
 import SliderComponent from './SliderComponent';
 import BettingCategory from './BettingCategory';
+import CountDown from './CountDown';
+import ReactTable from './ReactTable';
+
 
 const Content = () => {
 
@@ -12,6 +15,10 @@ const Content = () => {
     function controlSound(){
         setSound(!sound)
     }
+
+    useEffect(()=>{
+
+    })
 
 
     let navigationItems = [
@@ -140,6 +147,16 @@ const Content = () => {
                 </div>
 
                 <BettingCategory/>
+            </div>
+
+            <div className='roulette-race'>
+                <header>
+                    <span>Daily Roulette Race</span>
+                    <span>Ends in <CountDown/> </span>
+                </header>
+
+                <ReactTable/>
+                
             </div>
       </div>
     </div>

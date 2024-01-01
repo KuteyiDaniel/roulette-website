@@ -74,7 +74,7 @@
         .roulette{
             width: 100%;
             background: rgba(18, 28, 35, 1);
-            padding: 20px 20px 40px 20px;
+            padding: 25px 20px 50px 20px;
             border-radius: 10px;
           
 
@@ -85,7 +85,7 @@
                 
                 span{
                     color: #fff;
-                    font-size: 20px;
+                    font-size: 18px;
                 }
 
                 .volume{
@@ -154,7 +154,7 @@
                         }
 
                         div:hover{
-                            color: rgba(1, 254, 134, 1);
+                            color: rgba(1, 254, 134, 0.5);
                         }
                     }
 
@@ -164,6 +164,31 @@
                         transform: translateY(-50%);
                         left: 20px;
                     }
+                }
+            }
+        }
+
+        .roulette-race{
+            width: 100%;
+            background: rgba(18, 28, 35, 1);
+            padding: 20px 20px 20px 20px;
+            border-radius: 10px;
+            margin: 25px 0px 25px 0px;
+
+            
+            header{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                span:first-child{
+                    color: #fff;
+                    font-size: 18px;
+                }
+
+                span:last-child{
+                    color: rgba(87, 106, 120, 1);
+                    font-size: 14px;
                 }
             }
         }
