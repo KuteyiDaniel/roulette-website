@@ -23,7 +23,7 @@ const RouletteRolls = ({ rolls }) => {
         return rollType.length;
     }
     return <div className={'roulette-rolls'}>
-        <label className={'rolls-label'}>Previous Rolls</label>
+        <label className={'rolls-label'}>PREVIOUS ROLLS</label>
         <div ref={el => listRef.current = el} className={'rolls-list'}>
             <div className={'rolls-container'}
                  style={{ 'transform': `translateX(-${getTranslatePosition()}px)`}}
@@ -40,7 +40,7 @@ const RouletteRolls = ({ rolls }) => {
         </div>
 
         <div className={'rolls-summary'}>
-            <label className={'rolls-label'}>Last 100 attempts</label>
+            <label className={'rolls-label'}>LAST 100</label>
             <div className={'summary-item'}>
                 <img
                     alt={'black icon'}
