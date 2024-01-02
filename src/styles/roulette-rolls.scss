@@ -1,0 +1,68 @@
+.roulette-rolls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 0;
+
+  .rolls-label{
+    font-size: .9rem;
+    margin-right: .4rem;
+    color: #ffffff;
+  }
+
+  .rolls-list{
+    overflow: hidden;
+    width: 400px;
+    max-width: 100%;
+    background: rgba(0, 0, 0, .35);
+    padding: .5rem .25rem;
+
+    .rolls-container{
+      display: inline-flex;
+      flex-wrap: nowrap;
+      transition: ease-in-out .2s;
+
+
+      .roll-icon{
+        &:not(:last-child) {
+          margin-right: .4rem;
+        }
+
+        img{
+          width: 28px;
+          height: 28px;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  .rolls-summary, .summary-item {
+    display: flex;
+    align-items: center;
+
+
+  }
+
+
+  .rolls-summary{
+    margin-left: .4rem;
+    .summary-item{
+      &:not(:last-child) {
+        margin-right: .4rem;
+      }
+
+      img{
+        width: 25px;
+        height: 25px;
+        margin-right: .4rem;
+      }
+
+      label{
+        font-size: 1rem;
+        font-weight: 700;
+        color: #ffffff;
+      }
+    }
+  }
+}
