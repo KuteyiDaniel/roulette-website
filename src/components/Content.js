@@ -6,19 +6,22 @@ import SliderComponent from './SliderComponent';
 import BettingCategory from './BettingCategory';
 import CountDown from './CountDown';
 import ReactTable from './ReactTable';
+import RouletteSlider from "./RouletteSlider";
+import RouletteRolls from "./RouletteRolls";
 
 
 const Content = () => {
 
-    let [sound, setSound] = useState(true)
+    let [sound, setSound] = useState(true);
+    let [matches, updateMatches] = useState([])
 
     function controlSound(){
         setSound(!sound)
     }
 
     useEffect(()=>{
-
-    })
+            console.log({ matches })
+    }, [matches])
 
 
     let navigationItems = [
@@ -71,6 +74,15 @@ const Content = () => {
         },
     ]
 
+
+    const getMatch = (match) => {
+        console.log({ match })
+        updateMatches([
+            ...matches,
+            match
+        ])
+    }
+
   return (
 
     <div className='main-container'>
@@ -80,8 +92,8 @@ const Content = () => {
                     navigationItems.map((data, index) => {
                         return <li key={index}>
                             <img src={data.imageUrl} alt='#'/>
-                            {data.item} 
-                            </li> 
+                            {data.item}
+                            </li>
                     })
                 }
 
@@ -104,24 +116,32 @@ const Content = () => {
                     <span>ROULETTE</span>
                     <div className='volume' onClick={()=>controlSound()}>
                         {
-                            sound ?        
+                            sound ?
                             <>
                             <img src='./Volume_Max.png' alt='#'/>
                             Sound On
                             </>
-                            : 
-                            
+                            :
+
                             <>
                             <FaVolumeXmark />
                             Sound Off
                             </>
-                            
+
                         }
                     </div>
-                  
+
                 </header>
 
-                <SliderComponent/>
+                {/*<SliderComponent/>*/}
+                <RouletteSlider
+                    rollTimeout={10}
+                    onMatch={event => getMatch(event)}
+                />
+
+                <RouletteRolls
+                    rolls={matches}
+                />
 
                 <div className='input-field-container'>
                     <div className='input-field'>
@@ -156,7 +176,7 @@ const Content = () => {
                 </header>
 
                 <ReactTable/>
-                
+
             </div>
       </div>
     </div>
