@@ -33,7 +33,12 @@
         background-color: rgba(22, 34, 43, 1);
       }
 
-      .pay{
+      td:last-child{
         color: rgba(1, 254, 134, 1);
       }
+
+      td:last-child.low-value{
+        color: rgba(205, 42, 42, 1);
+      }
+      
   }

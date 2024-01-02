@@ -33,6 +33,7 @@ const ReactTable = () => {
             amount: 2390156,
             multiplier: 1.01,
             //pay: 2390183
+            class: 'low-value'
         },
     ]
 
@@ -55,7 +56,7 @@ const ReactTable = () => {
                         <td>00:{data.time}</td>
                         <td>{data.amount}</td>
                         <td>{data.multiplier}</td>
-                        <td className='pay'>{(data.amount * data.multiplier).toFixed(1)}</td>
+                        <td className={data.class}>{(data.amount * data.multiplier).toFixed(1)}</td>
                     </tr>
                 })
             }
