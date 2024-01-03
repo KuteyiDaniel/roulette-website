@@ -1,23 +1,24 @@
 import React, { useEffect } from 'react'
 import { useState, /* useEffect */ } from 'react'
 import '../styles/Content.scss'
-import { FaVolumeXmark } from "react-icons/fa6";
-import SliderComponent from './SliderComponent';
+//import { FaVolumeXmark } from "react-icons/fa6";
+//import SliderComponent from './SliderComponent';
 import BettingCategory from './BettingCategory';
 import CountDown from './CountDown';
 import ReactTable from './ReactTable';
 import RouletteSlider from "./RouletteSlider";
 import RouletteRolls from "./RouletteRolls";
+import Sound from './Sound';
 
 
 const Content = () => {
 
-    let [sound, setSound] = useState(true);
+    //let [sound, setSound] = useState(true);
     let [matches, updateMatches] = useState([])
 
-    function controlSound(){
+    /*function controlSound(){
         setSound(!sound)
-    }
+    }*/
 
     useEffect(()=>{
             console.log({ matches })
@@ -114,22 +115,7 @@ const Content = () => {
             <div className='roulette'>
                 <header>
                     <span>ROULETTE</span>
-                    <div className='volume' onClick={()=>controlSound()}>
-                        {
-                            sound ?
-                            <>
-                            <img src='./Volume_Max.png' alt='#'/>
-                            Sound On
-                            </>
-                            :
-
-                            <>
-                            <FaVolumeXmark />
-                            Sound Off
-                            </>
-
-                        }
-                    </div>
+                    <Sound/>
 
                 </header>
 
