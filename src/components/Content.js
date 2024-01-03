@@ -135,7 +135,7 @@ const Content = () => {
 
                 {/*<SliderComponent/>*/}
                 <RouletteSlider
-                    rollTimeout={10}
+                    rollTimeout={2}
                     onMatch={event => getMatch(event)}
                 />
 

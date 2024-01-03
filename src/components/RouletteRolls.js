@@ -1,4 +1,4 @@
-import React, {useRef} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import "../styles/roulette-rolls.scss";
 
 import SilverIcon from "../icons/Coin 5.png";
@@ -7,10 +7,17 @@ import GoldIcon from "../icons/Coin 17.png";
 const RouletteRolls = ({ rolls }) => {
     let listRef = useRef(null);
     let containerRef = useRef(null);
+
+    let [ translatePosition, updateTranslatePosition ] = useState(0);
+
+    useEffect(() => {
+        updateTranslatePosition(getTranslatePosition())
+    }, [ rolls ])
     const getTranslatePosition = () => {
         let position = 0;
         if (listRef.current && containerRef.current) {
             position = containerRef.current.clientWidth - listRef.current.clientWidth;
+            position += 12;
             console.log({ position })
         }
 
@@ -26,7 +33,7 @@ const RouletteRolls = ({ rolls }) => {
         <label className={'rolls-label'}>Previous Rolls</label>
         <div ref={el => listRef.current = el} className={'rolls-list'}>
             <div className={'rolls-container'}
-                 style={{ 'transform': `translateX(-${getTranslatePosition()}px)`}}
+                 style={{ 'transform': `translateX(-${translatePosition}px)`}}
                  ref={el => containerRef.current = el}
             >
                 {
