@@ -133,6 +133,7 @@ const RouletteSlider = ({ rollTimeout = 5, onMatch }) => {
 
     useEffect(() => {
         console.log('Sliding', sliding)
+        
         const moveSlider = () => {
 
             if (sliding === false || !mainSlider.current) { return }
@@ -215,7 +216,7 @@ const RouletteSlider = ({ rollTimeout = 5, onMatch }) => {
                 {
                     !sliding && waitTime > 0 ? <div className={'roulette-countdown'}>
                         <div className={'countdown-header'}>Rolling in</div>
-                        <div className={'countdown-timer'}>{ waitTime }s</div>
+                        <div className={'countdown-timer'}>{ waitTime }</div>
                     </div> : <div ref={el => centerLine.current = el } className={'center-line'}></div>
                 }
             </div>

@@ -15,7 +15,7 @@ const NavBar = () => {
                     <img src='./Layer 1.png' alt='company-logo'/>
                 </div>
 
-                <div className='navigation-figures'>
+                <div className='navigation-figures fade'>
                     <div className='margin-area'>
                         <img src='./solana-sol-logo.png'alt='#'/>
                         <span className='figure'>49.55677717</span>

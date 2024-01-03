@@ -25,7 +25,20 @@
         font-size: 14px;
       }
 
+      tr:nth-child(even):hover{
+        background-color:  rgba(22, 34, 43, 0.8);
+      }
+
       tr:nth-child(even) {
         background-color: rgba(22, 34, 43, 1);
       }
+
+      td:last-child{
+        color: rgba(1, 254, 134, 1);
+      }
+
+      td:last-child.low-value{
+        color: rgba(205, 42, 42, 1);
+      }
+      
   }
