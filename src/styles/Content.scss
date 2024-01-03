@@ -48,7 +48,14 @@
         z-index: 1;
         border-right: 1px solid rgba(24, 38, 47, 1);
         overflow-y: auto;
+        height: 100vh;
         //border: 1px solid #fff;
+    
+        /* width */
+
+        
+
+
 
         .navigation-list{
             list-style: none;
@@ -87,6 +94,21 @@
                 margin: 0px 10px 0px 0px;
             }
         }
+    }
+
+    .fixed-nav-bar::-webkit-scrollbar{
+        width: 2.5px;
+    }
+    
+    .fixed-nav-bar::-webkit-scrollbar-track{
+        background: 
+        rgb(14,19,27);
+        border-radius: 5px;
+    }
+    
+    .fixed-nav-bar::-webkit-scrollbar-thumb{
+        background: rgba(87, 106, 120, 0.3);
+        border-radius: 5px;
     }
 
     .content{
